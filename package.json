@@ -9,6 +9,7 @@
   "author": "Aayush Virkar",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "node-sass": "^5.0.0"
   }
 }
