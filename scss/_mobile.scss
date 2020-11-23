@@ -1,0 +1,177 @@
+// Widescreens
+
+@include mediaXl {
+
+    .projects {
+        grid-template-columns: repeat(3,1fr);
+
+    }
+}
+//Desktop and LAptop
+@include mediaLg {
+
+    .projects {
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    
+}
+
+//Tables and Small laptops
+@include mediaMd {
+
+    main {
+        align-items: center;
+        text-align: center;
+        
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+
+    ul.menu-nav,div.menu-branding {
+
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    .menu-nav {
+
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size: 24px;
+    }
+
+    
+
+    .about-info {
+
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+
+        grid-template-columns: 1fr;
+        
+    }
+
+    .projects {
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    .boxes {
+        
+        div {
+            
+            margin-top: 10rem;
+            
+        }
+    }
+
+}
+
+//Smart Phones
+@include mediaSm {
+
+
+    main#home h1 {
+
+        margin-top: 10vh;
+       
+    }
+
+    
+    
+    .heading {
+
+        margin-right: 10vw;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+        
+    }
+
+    .boxes {
+        
+        div {
+            
+            margin-top: 5rem;
+            
+        }
+    }
+
+    .menu-nav {
+
+        
+        align-items: center;
+        height: 160vh;
+        margin-left: 27vw;
+        background-color: transparent;
+        list-style-type: none;
+
+        transform:translate3d(0,0,0);
+        @include easeOut;
+
+        &.show{
+            // Slide in from top
+
+            transform:translate3d(0,0,0);
+        }
+
+    }
+
+    .nav-item{
+
+        &.show{
+            transform:translate3d(0,0,0);
+        }
+    }
+    
+    .topnav {
+
+        position: fixed;
+        background-color: black;
+        
+        a {
+
+           font-size: 11px;
+           margin: 5px 5px 0px 5px;
+           padding: 5px;
+        }
+    }
+
+    .img-btn-next {
+
+        font-size: 1.5rem;
+        margin-right: 5px;
+        padding: 5px;
+    }
+
+    .img-btn-prev {
+
+        font-size: 1.5rem;
+        margin-left: 5px;
+        padding: 5px;
+    }
+
+    .menu-btn {
+        
+        top: 48vh;
+
+    }
+
+    
+}
